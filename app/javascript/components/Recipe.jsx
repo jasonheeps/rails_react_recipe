@@ -4,8 +4,6 @@ import { Link/*, useParams*/ } from 'react-router-dom';
 export default function Recipe(props) {
 // class Recipe extends React.Component {
   const [recipe, setRecipe] = useState({ ingredients: '' });
-  // Or like this?:
-  // const [recipe, setRecipe] = useState({ recipe: { ingredients: '' } });
 
   // constructor(props) {
   //   super(props);
@@ -119,6 +117,9 @@ export default function Recipe(props) {
             {/*<button type="button" className="btn btn-danger" onClick={this.deleteRecipe}>*/}
               Delete Recipe
             </button>
+            <Link to={`/recipe/${recipe.id}/edit`} className="btn btn-warning mt-2">
+            Edit Recipe
+          </Link>
           </div>
         </div>
         <Link to="/recipes" className="btn btn-link">
