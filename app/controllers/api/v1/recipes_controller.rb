@@ -4,8 +4,7 @@ class Api::V1::RecipesController < ApplicationController
     render json: recipe
   end
 
-  def create
-    recipe = Recipe.create!(recipe_params)
+  def show
     if recipe
       render json: recipe
     else
@@ -13,7 +12,8 @@ class Api::V1::RecipesController < ApplicationController
     end
   end
 
-  def show
+  def create
+    recipe = Recipe.create!(recipe_params)
     if recipe
       render json: recipe
     else
