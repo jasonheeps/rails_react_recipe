@@ -13,7 +13,7 @@ export default function NewRecipe(props) {
 const [recipe, setRecipe] = useState({
   name: '',
   ingredients: '',
-  instruciton: ''
+  instruction: ''
 });
 
 //   constructor(props) {
@@ -41,7 +41,7 @@ const [recipe, setRecipe] = useState({
     // OPTION 1
     // setState(event.target.name, event.target.value);
     // OPTION 2
-    setRecipe({...recipe, [event.target.name]: event.target.value})
+    setRecipe({...recipe, [event.target.name]: event.target.value});
   // this.setState({ [event.target.name]: event.target.value })
   }
 
